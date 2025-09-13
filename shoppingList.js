@@ -44,4 +44,27 @@ function additem(item, quantity) {
 
     }
     additem ("limones", 3)
-    console.table(shoppingList)
+
+   /// otra forma de hacerlo seria esta 
+
+//function addItem(list, item,quantity) {
+//    let newProduct = {
+  //      item: item, // Cocacola
+    //    quantity : quantity //cantidad
+      //  comprado: false
+    //}
+    //list.push(newProduct)
+    //retun list
+
+//}
+
+//shoppingList = addItem(shoppingList, "sandia", 3) / ashopping list le asigno el resultado de ejecutar additem
+
+
+    function removeItem(index) {
+        shoppingList.splice(index, 1)
+    } 
+    removeItem(1)
+
+
+console.table(shoppingList)

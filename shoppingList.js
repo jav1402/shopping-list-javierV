@@ -36,7 +36,7 @@ shoppingList.push(fourProduct)
 console.table(shoppingList)
 
 function additem(item, quantity) {
-    const newitem ={
+    let newitem ={
         item : item,
         cantidad: quantity,
         comprado: false,};

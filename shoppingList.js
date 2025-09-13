@@ -1,8 +1,39 @@
-const shoppingList = [ {
+let shoppingList = []
+
+let firstProduct = {
     item : "platano",
-    cantidad : 2 ,
-    comprado : false}
-]
+    cantidad : 2,
+    comprado : false
+}
+
+shoppingList.push(firstProduct)
+
+let secondProduct = {
+    item : "peras",
+    cantidad : 5,
+    comprado : false
+}
+
+shoppingList.push(secondProduct)
+
+let threeProduct = {
+    item: "melones",
+    cantidad: 10,
+    comprado: false
+}
+
+shoppingList.push(threeProduct)
+
+let fourProduct = {
+    item: "zanahorias",
+    cantidad: 15,
+    comprado: false
+}
+
+
+shoppingList.push(fourProduct)
+
+console.table(shoppingList)
 
 function additem(item, quantity) {
     const newitem ={
@@ -12,5 +43,5 @@ function additem(item, quantity) {
         shoppingList.push(newitem);
 
     }
-    additem ("peras", 3)
-    console.log(shoppingList)
+    additem ("limones", 3)
+    console.table(shoppingList)

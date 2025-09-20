@@ -1,17 +1,17 @@
 let shoppingList = []
 
 let firstProduct = {
-    item : "platano",
-    cantidad : 2,
-    comprado : false
+    item: "platano",
+    cantidad: 2,
+    comprado: false
 }
 
 shoppingList.push(firstProduct)
 
 let secondProduct = {
-    item : "peras",
-    cantidad : 5,
-    comprado : false
+    item: "peras",
+    cantidad: 5,
+    comprado: false
 }
 
 shoppingList.push(secondProduct)
@@ -35,36 +35,38 @@ shoppingList.push(fourProduct)
 
 console.table(shoppingList)
 
-function additem(item, quantity) {
-    let newitem ={
-        item : item,
-        cantidad: quantity,
-        comprado: false,};
-        shoppingList.push(newitem);
+function additem(item, cantidad) {
+    let newitem = {
+        item: item,
+        cantidad: cantidad,
+        comprado: false,
+    };
+    shoppingList.push(newitem);
 
-    }
-    additem ("limones", 3)
-
-   /// otra forma de hacerlo seria esta 
-
-//function addItem(list, item,quantity) {
-//    let newProduct = {
-  //      item: item, // Cocacola
-    //    quantity : quantity //cantidad
-      //  comprado: false
-    //}
-    //list.push(newProduct)
-    //retun list
-
-//}
-
-//shoppingList = addItem(shoppingList, "sandia", 3) / ashopping list le asigno el resultado de ejecutar additem
+}
+additem("limones", 3)
 
 
-    function removeItem(index) {
-        shoppingList.splice(index, 1)
-    } 
-    removeItem(1)
+function removeItem(list, index) {
+    list.splice(index, 1)
+    return list
+}
 
+
+function updateItem(list, index, newItem, newQuantity) {
+    let updatedProduct = list[index];
+    updatedProduct.item = newItem;
+    updatedProduct.quantity = newQuantity;
+    return list;
+}
 
 console.table(shoppingList)
+
+
+  
+ shoppingList = removeItem(shoppingList, 3);
+ console.table(shoppingList); 
+ 
+ 
+ shoppingList = updateItem(shoppingList, 1, "Kiwi", 6);
+ console.table(shoppingList); 
